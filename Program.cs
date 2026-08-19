@@ -12,6 +12,7 @@ namespace TopicDemoApp
             new InheritanceExample(),
             new AbstractClassExample(),
             new InterfaceExample(),
+            new SealedClassMethodExample(),
             // add other modules here
         };
 
