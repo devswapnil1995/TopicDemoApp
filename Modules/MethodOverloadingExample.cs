@@ -8,7 +8,7 @@ namespace TopicDemoApp.Modules
     /// methods with different parameter lists. Callers can use the same method
     /// name with different arguments to invoke different behavior.
     /// </summary>
-    public class MethodOverloading : ITopicModule
+    public class MethodOverloadingExample : ITopicModule
     {
         public string Name => "Method Overloading";
         public string Description => "Learn about method overloading in C#.";

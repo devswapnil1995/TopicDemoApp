@@ -6,10 +6,11 @@ namespace TopicDemoApp
     {
         private static readonly List<ITopicModule> Modules = new()
         {
-            new AbstractionEncapsulationBasic(),
-            new MethodOverloading(),
-            new MethodOverriding(),
-            new Inheritance(),
+            new AbstractionEncapsulationBasicExample(),
+            new MethodOverloadingExample(),
+            new MethodOverridingExample(),
+            new InheritanceExample(),
+            new AbstractClassExample(),
             // add other modules here
         };
 

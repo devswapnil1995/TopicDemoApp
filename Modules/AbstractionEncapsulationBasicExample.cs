@@ -15,7 +15,7 @@ namespace TopicDemoApp.Modules
     /// CalculateSalary method) are kept private so they cannot be modified
     /// directly from outside the class.
     /// </summary>
-    public class AbstractionEncapsulationBasic : ITopicModule
+    public class AbstractionEncapsulationBasicExample : ITopicModule
     {
         public string Name => "Abstraction and Encapsulation - Basic";
         public string Description => "Learn the basics of abstraction and encapsulation in C#.";

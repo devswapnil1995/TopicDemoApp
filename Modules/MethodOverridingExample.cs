@@ -10,7 +10,7 @@ namespace TopicDemoApp.Modules
     /// defined in its base class. This demo also shows runtime polymorphism
     /// when a base-class reference points to a derived-class instance.
     /// </summary>
-    public class MethodOverriding : ITopicModule
+    public class MethodOverridingExample : ITopicModule
     {
         public string Name => "Method Overriding";
         public string Description => "Learn about method overriding in C#";

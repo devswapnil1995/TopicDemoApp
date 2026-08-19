@@ -13,7 +13,7 @@ namespace TopicDemoApp.Modules
     /// - Run creates a list of StaffMember instances and shows how polymorphism
     ///   allows calling the same method to produce different results.
     /// </summary>
-    public class Inheritance : ITopicModule
+    public class InheritanceExample : ITopicModule
     {
         public string Name => "Inheritance";
         public string Description => "Demonstrates the concept of inheritance in C#.";
@@ -37,6 +37,10 @@ namespace TopicDemoApp.Modules
                 s.ShowDetails();
                 Console.WriteLine();
             }
+
+            // Pause so the user can read the output before returning to the menu
+            Console.WriteLine("\nPress Enter to return to the main menu...");
+            Console.ReadLine();
         }
     }
 
