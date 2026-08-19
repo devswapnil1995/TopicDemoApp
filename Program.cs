@@ -9,6 +9,7 @@ namespace TopicDemoApp
             new AbstractionEncapsulationBasic(),
             new MethodOverloading(),
             new MethodOverriding(),
+            new Inheritance(),
             // add other modules here
         };
 
