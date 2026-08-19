@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TopicDemoApp.Modules
+{
+    /// <summary>
+    /// A small demo module that shows basic abstraction and encapsulation concepts.
+    ///
+    /// Abstraction: The <see cref="Employee"/> class exposes a simple public method
+    /// (ShowEmployeeDetails) so callers can get the employee information without
+    /// needing to know how the net salary is calculated.
+    ///
+    /// Encapsulation: Employee state and implementation details (fields and the
+    /// CalculateSalary method) are kept private so they cannot be modified
+    /// directly from outside the class.
+    /// </summary>
+    public class AbstractionEncapsulationBasic : ITopicModule
+    {
+        public string Name => "Abstraction and Encapsulation - Basic";
+        public string Description => "Learn the basics of abstraction and encapsulation in C#.";
+
+        /// <summary>
+        /// Entry point for the demo. Creates Employee instances and shows details.
+        /// The caller does not need to know how net salary is computed; that logic
+        /// is encapsulated inside Employee.
+        /// </summary>
+        public void Run()
+        {
+            Console.WriteLine("Running Abstraction and Encapsulation - Basic...");
+
+            // Even though we pass the gross salary, the consumer only sees the
+            // resulting net salary. The calculation is hidden inside Employee.
+            Employee employeeSwapnil = new Employee(1, "Swapnil", 31000);
+            employeeSwapnil.ShowEmployeeDetails();
+
+            Console.ReadLine(); // Wait for user to observe output
+
+            Employee employeeOmkar = new Employee(2, "Omkar", 29000);
+            employeeOmkar.ShowEmployeeDetails();
+
+            Console.ReadLine(); // Wait for user to observe output
+        }
+    }
+
+    public class Employee
+    {
+        private int EmpId;
+        private string EmpName;
+        private double GrossSalary; // Which includes all variables, total salary
+        private double TaxDeuction = 0.1;
+        private double NetSalary;
+        //Constructor to get details on initialization
+        public Employee(int EmpId, string EmpName, double GrossSalary)
+        {
+            this.EmpId = EmpId;
+            this.EmpName = EmpName;
+            this.GrossSalary = GrossSalary;
+        }
+        //Private method to calculate net salary
+        void CalculateSalary(double GrossSalary)
+        {
+            if (GrossSalary > 30000)
+            {
+                this.NetSalary = GrossSalary - (GrossSalary * TaxDeuction);
+            }
+            else
+            {
+                this.NetSalary = GrossSalary;
+            }
+        }
+        //Method to expose other classes
+        public void ShowEmployeeDetails()
+        {
+            CalculateSalary(this.GrossSalary);
+            Console.WriteLine("EmpId: {0}", this.EmpId);
+            Console.WriteLine("EmpName: {0}", this.EmpName);
+            Console.WriteLine("NetSalary: {0}", this.NetSalary);
+        }
+    }
+}

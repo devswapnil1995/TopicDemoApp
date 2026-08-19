@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TopicDemoApp.Modules
+{
+    public class AbstractionEncapsulationBasic : ITopicModule
+    {
+        public string Name => "Abstraction and Encapsulation - Basic";
+        public string Description => "Learn the basics of abstraction and encapsulation in C#.";
+
+        public void Run()
+        {
+            Console.WriteLine("Running Abstraction and Encapsulation - Basic...");
+            // Implementation for the topic module
+
+            //Even providing gross salary, we are showing net salary, employee don't know how it is working internally
+
+            Employee employeeSwapnil = new Employee(1, "Swapnil", 31000);
+            employeeSwapnil.ShowEmployeeDetails();
+
+            Console.ReadLine(); //It will wait for user action
+
+            Employee employeeOmkar = new Employee(2, "Omkar", 29000);
+            employeeOmkar.ShowEmployeeDetails();
+
+            Console.ReadLine();//It will wait for user action
+        }
+    }
+
+    public class Employee
+    {
+        private int EmpId;
+        private string EmpName;
+        private double GrossSalary; // Which includes all variables, total salary
+        private double TaxDeuction = 0.1;
+        private double NetSalary;
+        //Constructor to get details on initialization
+        public Employee(int EmpId, string EmpName, double GrossSalary)
+        {
+            this.EmpId = EmpId;
+            this.EmpName = EmpName;
+            this.GrossSalary = GrossSalary;
+        }
+        //Private method to calculate net salary
+        void CalculateSalary(double GrossSalary)
+        {
+            if (GrossSalary > 30000)
+            {
+                this.NetSalary = GrossSalary - (GrossSalary * TaxDeuction);
+            }
+            else
+            {
+                this.NetSalary = GrossSalary;
+            }
+        }
+        //Method to expose other classes
+        public void ShowEmployeeDetails()
+        {
+            CalculateSalary(this.GrossSalary);
+            Console.WriteLine("EmpId: {0}", this.EmpId);
+            Console.WriteLine("EmpName: {0}", this.EmpName);
+            Console.WriteLine("NetSalary: {0}", this.NetSalary);
+        }
+    }
+}
