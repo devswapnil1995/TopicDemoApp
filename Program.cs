@@ -11,7 +11,7 @@ namespace TopicDemoApp
             new MethodOverridingExample(),
             new InheritanceExample(),
             new AbstractClassExample(),
-            new InheritanceExample(),
+            new InterfaceExample(),
             // add other modules here
         };
 
