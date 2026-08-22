@@ -19,6 +19,7 @@ namespace TopicDemoApp
             new CompositionExample(),
             new BoxingUnboxingExample(),
             new RefOutInExample(),
+            new NullableReferenceTypesExample(),
             // add other modules here
         };
 
