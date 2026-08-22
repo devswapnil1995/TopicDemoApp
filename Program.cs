@@ -15,6 +15,7 @@ namespace TopicDemoApp
             new SealedClassMethodExample(),
             new StaticVsInstanceExample(),
             new ConstructorExample(),
+            new AccessModifiersExample(),
             // add other modules here
         };
 
