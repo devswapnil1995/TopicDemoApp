@@ -21,7 +21,7 @@ namespace TopicDemoApp
             new RefOutInExample(),
             new NullableReferenceTypesExample(),
             new TypeKindsExample(),
-            // add other modules here
+            new SwitchExpressionExample(),
         };
 
         private static void Main(string[] args)
