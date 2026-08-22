@@ -14,6 +14,7 @@ namespace TopicDemoApp
             new InterfaceExample(),
             new SealedClassMethodExample(),
             new StaticVsInstanceExample(),
+            new ConstructorExample(),
             // add other modules here
         };
 
