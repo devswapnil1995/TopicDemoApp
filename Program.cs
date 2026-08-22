@@ -24,6 +24,7 @@ namespace TopicDemoApp
             new SwitchExpressionExample(),
             new GenericConstraintsExample(),
             new DelegateExample(),
+            new EventExample(),
         };
 
         private static void Main(string[] args)
