@@ -16,6 +16,7 @@ namespace TopicDemoApp
             new StaticVsInstanceExample(),
             new ConstructorExample(),
             new AccessModifiersExample(),
+            new CompositionExample(),
             // add other modules here
         };
 
