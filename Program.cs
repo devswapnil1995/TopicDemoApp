@@ -18,6 +18,7 @@ namespace TopicDemoApp
             new AccessModifiersExample(),
             new CompositionExample(),
             new BoxingUnboxingExample(),
+            new RefOutInExample(),
             // add other modules here
         };
 
