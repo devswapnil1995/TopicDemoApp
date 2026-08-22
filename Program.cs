@@ -20,6 +20,7 @@ namespace TopicDemoApp
             new BoxingUnboxingExample(),
             new RefOutInExample(),
             new NullableReferenceTypesExample(),
+            new TypeKindsExample(),
             // add other modules here
         };
 
