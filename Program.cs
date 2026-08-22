@@ -22,6 +22,7 @@ namespace TopicDemoApp
             new NullableReferenceTypesExample(),
             new TypeKindsExample(),
             new SwitchExpressionExample(),
+            new GenericConstraintsExample(),
         };
 
         private static void Main(string[] args)
