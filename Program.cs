@@ -23,6 +23,7 @@ namespace TopicDemoApp
             new TypeKindsExample(),
             new SwitchExpressionExample(),
             new GenericConstraintsExample(),
+            new DelegateExample(),
         };
 
         private static void Main(string[] args)
