@@ -25,6 +25,7 @@ namespace TopicDemoApp
             new GenericConstraintsExample(),
             new DelegateExample(),
             new EventExample(),
+            new ExtensionMethodsExample(),
         };
 
         private static void Main(string[] args)
